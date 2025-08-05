@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Flowers School – Student Portal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+    header { background-color: #4CAF50; color: #fff; padding: 15px; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    .menu { display: flex; gap: 20px; }
+    .menu a { color: #fff; text-decoration: none; font-weight: 500; }
+    main { padding: 20px; }
+    .timetable { display: none; margin-top: 20px; }
+    .timetable table { width: 100%; border-collapse: collapse; }
+    .timetable th, .timetable td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+    .timetable th { background-color: #f2f2f2; }
+    @media(max-width: 600px) {
+      nav { flex-direction: column; }
+      .menu { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Spring Flowers School</div>
+      <div class="menu">
+        <a href="#">Home</a>
+        
+        <a href="#" id="showTime">Time Table</a>
+       
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome Student!</h2>
+    <p>Use the menu to navigate through your application.</p>
+    <section class="timetable" id="timetable">
+      <h3>My Time Table</h3>
+      <table>
+        <tr>
+          <th>Day</th>
+          <th>9am – 10am</th>
+          <th>10am – 11am</th>
+          <th>11am – 12pm</th>
+          <th>12pm – 1pm</th>
+        </tr>
+        <tr>
+          <td>Monday</td><td>Math</td><td>English</td><td>Science</td><td>Sports</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td><td>Physics</td><td>Chemistry</td><td>History</td><td>Computer</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td><td>Math</td><td>English</td><td>Science</td><td>Art</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  <script>
+    const showBtn = document.getElementById('showTime');
+    const tableSec = document.getElementById('timetable');
+    showBtn.addEventListener('click', function(){
+      tableSec.style.display = tableSec.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  min-width: 280px;
+}
+
+table thead th,
+table tbody td {
+  text-align: center;
+}
