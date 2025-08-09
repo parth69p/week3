@@ -1,0 +1,13 @@
+.product-card{
+    display: inline-block;
+    gap: 20px;
+    margin:20px;
+    transition: background-color 1s ease-in;
+}
+.product-card:hover{
+    color:whitesmoke;
+    background-color: red;
+}
+button:hover{
+    background-color: lightgray;
+}

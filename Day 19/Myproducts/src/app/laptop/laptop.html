@@ -1,0 +1,7 @@
+<div class="product-card">
+    <h2>{{productname}}</h2>
+    <p> Price : ${{productprice}}</p>
+    <button (click)="addToCart()"[disabled] ="addedtocart">
+        {{ addedtocart ? 'Added to Cart': 'Add to cart' }}
+    </button>
+</div>
